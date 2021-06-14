@@ -1,0 +1,47 @@
+@import "anterior";
+$ancho:720px;
+.gridcontacto{
+    display: grid;
+    grid-template-areas: 
+    "Cabeza" 
+    "Derecha" "Izquierda"
+    "Pies";
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 2fr 2fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    height: 100vh; 
+}
+.imagenContacto{
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.padre{
+    background-color: coral;
+    width: $ancho;
+}
+.contendor{
+    background-color:cyan;
+    width: $ancho/2;
+    width: $ancho*2;
+}
+.caja{
+    background-color:darkorange;
+    width: ($ancho/2)-60;
+}
+.bloque{
+    background-color:gold;
+}
+@for $p from 1 through 3{
+    .ejemplo-#{p}{
+        width: 1em*$p;
+    }
+}
+
+
+
+
